@@ -455,13 +455,6 @@ img {
   display: flex;
 }
 
-.flex-ed {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-}
-
 .col-flex-ed {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -510,8 +503,8 @@ img {
             flex: 1;
     font-size: 13px;
     font-weight: 700;
-    font-family: "Lato", sans-serif;
-    background-color: #be8135;
+    font-family: "Raleway", sans-serif;
+    background-color: #3a1515;
     color: #fff;
     text-transform: uppercase;
   }
@@ -523,7 +516,7 @@ img {
     margin-left: 7px;
   }
   #fixed-tabs a:nth-of-type(2) {
-    background-color: #5cd36d;
+    background-color: #c56906;
   }
   #fixed-tabs i {
     font-size: 16px;
@@ -533,8 +526,8 @@ img {
     display: inline-block;
     margin: 0 auto;
   }
-  footer {
-    margin-bottom: 42px !important;
+  .copy {
+    padding-bottom: 65px !important;
   }
 }
 
@@ -551,28 +544,29 @@ body {
   position: relative;
   background-color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 p {
   color: #545454;
-  font: 400 17px/27px "Lato", sans-serif;
+  font: 400 17px/27px "Raleway", sans-serif;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
-  color: #84de91;
+  color: #f68408;
   cursor: pointer;
 }
 
 a:hover {
-  color: #d09a56;
+  color: #602222;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-shadow: 1px 1.7px 5px rgba(0, 0, 0, 0.2);
-  color: #d09a56;
-  font-family: "Lato", sans-serif;
+  color: #602222;
+  font-family: "Raleway", sans-serif;
   font-weight: 900;
   text-align: center;
   position: relative;
@@ -586,35 +580,32 @@ h1 {
   margin-bottom: 10px;
 }
 
-h1 span {
-  color: #545454;
+h1 sup {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+h2, .h2 {
+  font-size: 45px;
+  color: #a92731;
+}
+
+h2 span, .h2 span {
   font-weight: 300;
 }
 
-h2 {
-  font: 900 49px/1.11 "Lato", sans-serif;
-}
-
-h2 span {
-  font-weight: 300;
-  font-size: 23px;
-}
-
-h3 {
-  font: 300 42px/48px "Lato", sans-serif;
-  color: white;
-  margin-bottom: 0;
-  text-align: left;
-  margin-top: 50px;
-  text-transform: uppercase;
-  text-shadow: none;
+h3, .h3 {
+  color: #000;
+  font-size: 24px;
+  margin: 10px auto 5px;
+  font-weight: 400;
 }
 
 header {
   position: relative;
-  background-color: white;
-  -webkit-box-shadow: 0 1px 10px rgba(9, 10, 10, 0.35);
-          box-shadow: 0 1px 10px rgba(9, 10, 10, 0.35);
+  background-color: #602222;
+  -webkit-box-shadow: 0 4px 13.4px 2.6px rgba(17, 18, 18, 0.56);
+          box-shadow: 0 4px 13.4px 2.6px rgba(17, 18, 18, 0.56);
   width: 100%;
 }
 
@@ -652,26 +643,30 @@ header address {
           animation-name: slideIn;
 }
 
+.fix-nav header .logo img {
+  max-height: 90px;
+}
+
 .address {
-  color: #000;
+  color: #fff;
   font-size: 20px;
   line-height: 1.1;
   display: block;
 }
 
 .address:hover {
-  color: #86c78f;
+  color: #f68408;
 }
 
 .phone {
-  color: #86c78f;
+  color: #f68408;
   font-size: 40px;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 .phone:hover {
-  color: #22272a;
+  color: #fff;
 }
 
 /*  --------------  Buttons ----------------- */
@@ -679,10 +674,10 @@ header address {
   display: inline-block;
   margin: 3px auto;
   padding: 12px 15px 10px;
-  color: #000;
+  color: #fff;
   border-radius: 24px;
-  font: 400 18px/1.1 "Lato", sans-serif;
-  background-color: #84de91;
+  font: 700 18px/1.1 "Raleway", sans-serif;
+  background-color: #f68408;
   min-width: 200px;
   text-align: center;
   border: 2px solid white;
@@ -698,7 +693,7 @@ header address {
 }
 
 .btn:hover, .btn-alt:hover {
-  background-color: #d09a56;
+  background-color: #602222;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
@@ -725,8 +720,8 @@ header address {
 
 .split article {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 550px;
-          flex: 0 1 550px;
+      -ms-flex: 0 1 600px;
+          flex: 0 1 600px;
   margin: 10px;
   padding: 20px;
   text-align: left;
@@ -738,8 +733,17 @@ header address {
   margin: 10px 0;
 }
 
+.split figure {
+  position: relative;
+}
+
 .split figure img {
   position: relative;
+}
+
+.split .btn {
+  margin-left: 0;
+  display: table;
 }
 
 .even figure {
@@ -748,493 +752,480 @@ header address {
           order: -1;
 }
 
-/* -------------- Banner ----------------- */
-#banner {
-  background: url("assets/images/lp-invis-banner-bkgrd.jpg");
-  background-size: cover;
-  overflow: hidden;
+.odd {
+  background-color: #f4f4f4;
 }
 
-#banner .split {
+/* -------------- Banner ----------------- */
+#banner {
+  background: url("assets/images/lp-makeover-banner.jpg");
+  background-size: cover;
+  border-bottom: 3px solid #ef8607;
+  max-width: 1800px;
+  margin: auto;
+}
+
+#banner .container {
+  padding: 0;
   max-width: 1400px;
   margin: auto;
 }
 
 #banner .split article {
-  padding: 20px 10px 80px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 650px;
-          flex: 0 1 650px;
+  padding: 165px 10px;
+  max-width: 720px;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
-#banner .split figure {
+#banner figure {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-left: -100px;
-  margin-right: -10px;
-  margin-bottom: -60px;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 600px;
+          flex: 0 0 600px;
 }
 
-#banner .split figure img {
+#banner figure img {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   margin-bottom: auto;
   margin-top: auto;
+  display: none;
+}
+
+#banner .caption {
+  position: absolute;
+  bottom: 50px;
+  right: -20%;
+  color: #fff;
+  width: 120px;
+  text-transform: none;
+  font-size: 16px;
 }
 
 #banner .btn-alt {
-  margin: 10px auto;
+  margin: 20px auto 0;
   height: 100%;
   display: table;
 }
 
-/* ---------------- Offer --------------- */
-#offer {
-  margin: -80px auto 30px;
-  padding-bottom: 30px;
-  max-width: 988px;
-  background-color: #eee;
-  -webkit-box-shadow: 1.3px 2.7px 5px black;
-          box-shadow: 1.3px 2.7px 5px black;
-  position: relative;
+/* ---------------- Callouts Styles  ---------------- */
+.callouts {
   text-align: center;
-}
-
-#offer h2 {
-  display: block;
-  text-transform: uppercase;
-  background-color: #4d4d4e;
-  background-image: linear-gradient(-1deg, black 0%, #585858 100%);
-  font: 900 35px/42px "Lato", sans-serif;
-  color: white;
-  margin: 0;
-  padding: 5px;
-}
-
-#offer p {
-  color: #545454;
-  font: 300 23px/1.17 "Lato", sans-serif;
-  text-transform: uppercase;
-  margin: 15px 0 5px;
-}
-
-#offer h5 {
-  font-size: 59px;
-  line-height: 1.15;
   margin: 0 auto;
-  text-align: center;
-  position: relative;
-  text-transform: uppercase;
-  display: table;
-}
-
-#offer h5 small {
-  font: 400 22px/0.9 "Lato", sans-serif;
-  color: #d09a56;
-  text-transform: none;
-  text-shadow: none;
-  vertical-align: middle;
-}
-
-#offer h5 strong {
-  position: relative;
-  display: inline-block;
-  padding-right: 65px;
-  font-weight: 900;
-}
-
-#offer h5 strong small {
-  position: absolute;
-  right: 0;
-  text-align: left;
-  top: 10px;
-  font-size: 18px;
-}
-
-#offer h5 strong small span {
-  display: block;
-}
-
-#offer .float {
-  color: #545454;
-  font: 300 12px/13px "Lato", sans-serif;
-  margin: 10px;
-  text-transform: none;
-}
-
-#offer .btn-alt {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: -20px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 340px;
-}
-
-#stamp {
-  position: absolute;
-  top: -50px;
-  left: 30px;
-}
-
-/* ---------------- Benefits --------------- */
-#benefits {
-  padding-top: 20px;
-}
-
-#benefits h2 {
-  margin-bottom: 5px;
-  font-size: 37px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-#benefits .flex-ed {
-  padding: 0 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #1e90aa;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1e90aa), color-stop(50%, #25bfe3), to(#1e90aa));
-  background-image: linear-gradient(to right, #1e90aa 0%, #25bfe3 50%, #1e90aa 100%);
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow: hidden;
-}
-
-#benefits .col-flex-ed {
-  position: relative;
-  margin: -30px -70px -90px;
-}
-
-#benefits ul {
-  padding-left: 18px;
-}
-
-#benefits ul li {
-  list-style: none;
-  color: white;
-  padding-left: 25px;
-  font-size: 16px;
-  line-height: 2.55;
-  position: relative;
-  text-align: left;
-}
-
-#benefits ul li:before {
-  content: '\e901';
-  font-family: fontello;
-  color: #81be44;
-  position: absolute;
-  left: 0;
-  top: -3px;
-  font-size: 18px;
-}
-
-#benefits .braces li:before {
-  content: '\e840';
-  color: #960a09;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.line {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 2px;
-  height: 100%;
-  background-color: #fff;
-}
-
-.rounded-rect {
-  width: 9px;
-  height: 45px;
-  background-color: #f8981d;
-  border: 1.87px solid #fff;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 100px;
-  left: 10px;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---------------- Reviews --------------- */
-#reviews {
-  text-align: center;
-  max-width: 1030px;
-  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  background-color: #fff9f2;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+  max-width: 1280px;
+  height: auto;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.callouts a {
+  text-decoration: none;
+  margin: 15px auto;
   padding: 10px;
 }
 
-#reviews p {
-  font-size: 14px;
+.callouts div {
+  padding: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
 }
 
-#reviews .star {
+.callouts .portrait {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.callouts .portrait img {
+  position: relative;
+  z-index: 3;
+}
+
+.callouts .portrait:after {
+  content: "";
+  width: 91%;
+  height: 93%;
+  position: absolute;
+  border: 2px solid #ef8607;
+  border-radius: 10px;
+  z-index: 3;
+  margin: auto;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
+
+.callouts .portrait:hover:after, .callouts a:hover:after {
+  border-color: #fff;
+}
+
+.callouts a:hover h3 {
+  color: #631513;
+}
+
+.callouts p {
+  line-height: 1.1;
+}
+
+#offers {
+  overflow: hidden;
+}
+
+#offers .flex-ed {
+  max-width: 1400px;
+  margin: auto;
+}
+
+#offers .flex-ed > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#offers .flex-ed > div:first-of-type {
+  background-color: #631513;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.51)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 10px;
+  position: relative;
+}
+
+#offers .flex-ed > div:first-of-type:before {
+  content: '';
+  position: absolute;
+  left: -1000px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #631513;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.51)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#offers .btn {
+  margin: 10px 0 0;
+}
+
+#offers .h2.sp {
+  color: #f68408;
+  font-size: 40px;
+  text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
 }
 
-#reviews h4 {
-  font: 900 25px/1 "Lato", sans-serif;
+#offers .h2 {
+  color: #fff;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#offers .h3 span {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
   text-transform: uppercase;
 }
 
-#reviews h4 span {
-  font-size: 44px;
-  line-height: 28px;
+#fast {
+  background-color: #f0f0f0;
+  position: relative;
 }
 
-#reviews h4 small {
-  font-size: 31px;
+#fast:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: -1000px;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #f0f0f0;
 }
 
-#reviews .video {
+#fast .h2 {
+  color: #bf2c37;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 310px;
-          flex: 0 1 310px;
-  margin: 5px 10px;
-  max-width: 600px;
+      -ms-flex: 0 1 290px;
+          flex: 0 1 290px;
+  text-transform: none;
+  text-align: left;
+  font-weight: 900;
+  position: relative;
+  z-index: 2;
 }
 
-#reviews .video p {
-  font: 900 14px/1 "Lato", sans-serif;
-  text-transform: uppercase;
-  color: #86c78f;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.hear {
-  margin: 10px;
-}
-
-.comment {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 360px;
-          flex: 0 1 360px;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-}
-
-/* ---------------- Experience --------------- */
-#experienced {
-  padding: 30px 10px 50px;
-  background-color: #f8f8f8;
-}
-
-#experienced article {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 540px;
-          flex: 0 1 540px;
-}
-
-#experienced h2 sup {
-  font-size: 30%;
-  top: -1.5em;
-}
-
-#experienced article p {
-  margin-top: 25px;
-}
-
-#experienced figure {
-  max-width: 525px;
-  text-align: center;
-}
-
-#experienced figure img {
-  border-radius: 50%;
-}
-
-.name {
-  color: #7d7d7d;
-  padding: 10px 5px;
-  font: 400 italic 18px/1 "Lato", sans-serif;
-}
-
-.name:hover {
-  color: #d09a56;
+#fast figure {
+  margin-left: -260px;
+  margin: 20px -15px 0 -220px;
 }
 
 /* ---------------- Invislign --------------- */
 #invisalign {
-  padding: 30px 0;
+  padding: 30px 10px;
+}
+
+#invisalign .split {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#invisalign img {
+  margin: -30px auto -20px;
 }
 
 #invisalign figure {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 500px;
-          flex: 0 1 500px;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
   margin: 10px auto;
-  max-width: 500px;
 }
 
 #invisalign figure iframe {
-  border: 3px solid #d09a56;
+  vertical-align: middle;
+  border: 3px solid #f68408;
+  -webkit-box-shadow: 1.5px 2.6px 7px rgba(2, 2, 2, 0.35), inset 1.5px 2.6px 7px rgba(2, 2, 2, 0.35);
+          box-shadow: 1.5px 2.6px 7px rgba(2, 2, 2, 0.35), inset 1.5px 2.6px 7px rgba(2, 2, 2, 0.35);
 }
 
-#invisalign figure p {
-  color: #84de91;
-  font: 900 14px/1 "Lato", sans-serif;
+#invisalign figure:hover iframe {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.caption a, .caption {
+  color: #f68408;
+  font: 900 14px/ 1 'Lato', sans-serif;
   text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 0;
-  text-align: center;
 }
 
-/* ---------------- Teens --------------- */
-#teens {
-  padding: 0;
-  background-color: #f8f8f8;
+.caption a:hover, .caption:hover {
+  color: #545454;
 }
 
-#teens .split {
-  padding-left: 0;
-  max-width: 1400px;
+#results {
+  padding: 40px 0 0;
 }
 
-#teens article {
-  position: relative;
-  z-index: 1;
+#results article {
+  margin: 0 0 0 auto;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 520px;
-          flex: 0 1 520px;
+      -ms-flex: 0 1 550px;
+          flex: 0 1 550px;
+}
+
+#results figure {
+  padding-right: 140px;
+  margin-right: 20px;
+}
+
+#ba {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#ba img {
+  margin-top: 15px;
+}
+
+/* ---------------- Experience --------------- */
+.bkgrd {
+  background-color: #f4f4f4;
+}
+
+#experienced {
   padding: 0 10px;
-}
-
-#teens figure {
-  margin-right: -50px;
+  margin-top: 80px;
+  background: url(assets/images/lp-makeover-dr-bkg.png) no-repeat;
   position: relative;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  background-position: right;
+  z-index: 1;
 }
 
-@media (min-width: 1190px) {
-  #teens figure:after {
-    content: '';
-    position: absolute;
-    left: -1px;
-    right: 0;
-    top: -1px;
-    bottom: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(26%, rgba(243, 244, 245, 0)), to(rgba(234, 238, 239, 0)));
-    background: linear-gradient(90deg, #f8f8f8 0%, rgba(243, 244, 245, 0) 26%, rgba(234, 238, 239, 0) 100%);
-  }
+#experienced .split {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/* ---------------- Footer --------------- */
+#experienced h2 {
+  margin-right: -130px;
+}
+
+#experienced .btn-alt {
+  padding: 10px 30px;
+}
+
+#experienced figure {
+  max-width: 525px;
+  margin-top: -40px;
+  position: relative;
+  padding-left: 70px;
+}
+
+.dr-photo {
+  position: relative;
+  display: table;
+}
+
+.name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #bf2c37;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font: 400 17px/24px "Raleway", sans-serif;
+  color: white;
+}
+
+/* ---------------- Contact --------------- */
 footer {
-  background-color: #282828;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2c2c2c), color-stop(0.5%, #2c2c2c), color-stop(50%, #474747), color-stop(99.5%, #2c2c2c), to(#2c2c2c));
-  background-image: linear-gradient(to right, #2c2c2c 0%, #2c2c2c 0.5%, #474747 50%, #2c2c2c 99.5%, #2c2c2c 100%);
-  text-align: center;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
+  padding-top: 20px;
+  background-color: #464646;
+  background-image: radial-gradient(circle 383px at center, #652826 0%, #360b0b 100%);
+  -webkit-box-shadow: 0 5px 11px rgba(12, 10, 10, 0.5);
+          box-shadow: 0 5px 11px rgba(12, 10, 10, 0.5);
 }
 
-footer .split {
-  max-width: 1000px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-top: 30px;
-  padding: 0 10px 30px;
+footer .flex-ed {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1020px;
+  padding-bottom: 30px;
 }
 
 footer h2 {
+  padding: 0 10px;
   text-shadow: 1.3px 2.7px 7px rgba(0, 0, 0, 0.35);
   color: white;
-  font: 600 56px/69px 'Oswald', sans-serif;
+  font: 600 48px/1.23 "Oswald", sans-serif;
   text-transform: uppercase;
-  margin: 40px auto 20px;
-  padding: 0 10px;
+  margin-top: 30px;
 }
 
 footer .btn {
-  padding: 30px 20px 40px;
   border-radius: 0;
-  margin: 0 10px 10px;
-  font: 700 39px/1.2 "Lato", sans-serif;
-  margin: 0;
-  color: #000;
+  border: 2px solid white;
+  padding: 30px 10px;
 }
 
-footer .btn h4 {
-  font-size: 33px;
-  color: black;
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  line-height: 1;
+footer article a {
+  padding: 30px 5px;
+  max-width: 320px;
+}
+
+footer article p {
+  vertical-align: middle;
+  margin: 0 auto;
+  text-shadow: 0 3px 7px rgba(14, 15, 16, 0.35);
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
   text-transform: uppercase;
+  font: 700 33px/1 "Raleway", sans-serif;
 }
 
-footer .btn h4 small {
+footer article p:last-of-type {
+  margin-top: 30px;
+}
+
+footer article span {
   display: block;
+  font-size: 39px;
+}
+
+footer article small {
   font-size: 24px;
-}
-
-footer .btn h4:last-of-type {
   margin-top: 20px;
-  font-size: 33px;
-  font-weight: 700;
 }
 
-footer .btn .icon-phone {
-  display: inline-block;
-}
-
-footer .btn:hover .icon-phone {
+footer article:hover .icon-phone {
   -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-footer figure iframe {
+footer .icon-phone {
+  display: inline-block;
+  font-size: 36px;
+  margin-left: -30px;
+}
+
+footer .star:before {
+  font-family: 'fontello';
+  font-weight: 400;
+  margin: 0;
+  font-style: normal;
+  content: '\e80f \e80f \e80f \e80f \e80f';
+  color: #f68408;
+  padding-right: 10px;
+}
+
+footer .map {
+  border: 1px solid #f68408;
+}
+
+footer .map iframe {
   display: block;
   max-width: 100%;
-}
-
-footer .frame {
-  display: table;
-  margin-bottom: 10px;
+  height: 300px;
 }
 
 figcaption {
-  display: block;
-  margin-top: 10px;
-  color: #fff;
-  margin: 0;
-  font: 300 20px/1 "Source Sans Pro", sans-serif;
   text-transform: uppercase;
-}
-
-figcaption a {
-  color: #fff;
+  margin-top: 10px;
+  font: 400 20px/1.2 "Raleway", sans-serif;
 }
 
 figcaption strong {
@@ -1242,25 +1233,28 @@ figcaption strong {
   display: block;
 }
 
-figcaption a:hover {
-  color: #84de91;
+figcaption a {
+  color: white;
+}
+
+figcaption a:hover, figcaption a:hover p {
+  color: #f68408;
 }
 
 .copy {
-  padding: 20px;
-  font: 400 12px/1 "Source Sans Pro", sans-serif;
-  color: #fff;
-  background-color: #212121;
-  margin-top: 20px;
+  padding: 20px 0 40px;
+  background-color: #161616;
   text-transform: uppercase;
+  font: 300 12px/1 "Raleway", sans-serif;
+  color: #fff;
 }
 
 .copy a {
-  color: #fff;
+  color: white;
 }
 
 .copy a:hover {
-  color: #84de91;
+  color: #f68408;
 }
 
 /* ---------------- Invisalign Assessement --------------- */
@@ -1338,7 +1332,7 @@ input:focus, textarea:focus, .regular-radio:focus + label {
 
 /* Checkbox styles  */
 .checks {
-  border: 1px solid #d09a56;
+  border: 1px solid #602222;
   background-color: white;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1353,13 +1347,13 @@ input:focus, textarea:focus, .regular-radio:focus + label {
   cursor: pointer;
 }
 
-.checks:checked:after {
+.checks:after {
   content: '\e832';
   font: 400 13px/1 'fontello';
   position: absolute;
   top: 5px;
   left: 3px;
-  color: #d09a56;
+  color: #602222;
 }
 
 /* Radio Styles */
@@ -1377,7 +1371,7 @@ input:focus, textarea:focus, .regular-radio:focus + label {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 1px solid #d09a56;
+  border: 1px solid #602222;
   padding: 9px;
   border-radius: 10px;
   position: relative;
@@ -1395,7 +1389,7 @@ input:focus, textarea:focus, .regular-radio:focus + label {
   position: absolute;
   top: 3px;
   left: 3px;
-  background: #d09a56;
+  background: #602222;
   -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
           box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
@@ -1413,9 +1407,8 @@ input:focus, textarea:focus, .regular-radio:focus + label {
 }
 
 #landing-page-form p {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 30px;
+  max-width: 750px;
+  margin: 10px auto;
 }
 
 #landing-page-form .simple {
@@ -1453,342 +1446,345 @@ input:focus, textarea:focus, .regular-radio:focus + label {
 }
 
 /* ---------------- Media Queries --------------- */
+@media (max-width: 1320px) {
+  #banner {
+    background-position: center left -150px;
+  }
+  #banner figure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
+  }
+  #banner article {
+    margin: 0;
+  }
+  #banner article:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: -webkit-gradient(linear, right top, left top, from(#d2ccb4), color-stop(77%, #d2ccb4), to(rgba(210, 204, 180, 0.01)));
+    background: linear-gradient(270deg, #d2ccb4 0%, #d2ccb4 77%, rgba(210, 204, 180, 0.01) 100%);
+  }
+}
+
+@media (max-width: 1200px) {
+  #banner .split article {
+    padding: 120px 20px;
+  }
+  #banner figure {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
+  }
+}
+
 @media (max-width: 1050px) {
+  header .btn {
+    display: table;
+    margin: 10px 0;
+  }
   h1 {
-    font-size: 48px;
-  }
-  article h2 {
-    font-size: 40px;
-  }
-  #banner .split figure {
-    margin-left: -60px;
+    font-size: 60px;
   }
   #banner .split article {
-    padding-bottom: 50px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 55%;
+            flex: 0 1 55%;
   }
-  #offer {
-    margin-top: -30px;
+  .callouts h3 {
+    font-size: 25px;
   }
-  #list {
-    margin: 0 -60px;
+  #offers .h2 {
+    font-size: 45px;
   }
-  #benefits .flex-ed {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  #reviews {
-    margin: 20px auto 0;
-  }
-  #benefits ul {
-    padding-left: 0;
-    margin-top: 10px;
+  #experienced:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: -webkit-gradient(linear, right top, left top, from(#edece647), color-stop(57%, #edece7f7), to(rgba(210, 204, 180, 0.01)));
+    background: linear-gradient(270deg, #edece647 0%, #edece7f7 57%, rgba(210, 204, 180, 0.01) 100%);
   }
 }
 
 @media (max-width: 1000px) {
-  header .logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 260px;
-            flex: 0 1 260px;
+  header .flex-ed {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   header .address {
     display: none;
   }
-  header .phone {
-    font-size: 26px;
+  header .logo {
+    Flex: 1 1 100%;
+    margin-bottom: 20px;
   }
   header .btn-alt {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    margin: 10px 0;
   }
-  #banner h1 br {
-    display: none;
+  #banner {
+    background-color: #d2ccb4;
+    background-image: none;
+  }
+  #banner .split article {
+    margin: auto;
+    padding: 60px 20px;
   }
   #banner figure {
     margin: auto;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-bottom: -70px;
   }
-  #banner .split {
-    margin-top: 0;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  #banner figure img {
+    display: block;
+    width: 100%;
   }
-  #banner .split article {
-    margin: 20px auto 0;
-    padding-bottom: 20px;
-  }
-  #banner article h2 {
-    font-size: 46px;
-  }
-  #benefits .flex-ed {
-    padding: 20px 0;
-  }
-  #benefits .flex-ed > div {
-    margin: auto;
-  }
-  #benefits h3 {
-    text-align: center;
-    margin-top: 10px;
-  }
-  #list {
+  #banner article:before {
     display: none;
   }
-  #offer {
-    margin-top: -40px;
+  #banner .caption {
+    right: 20px;
+    bottom: 20px;
   }
-  #stamp {
-    top: -60px;
-  }
-  #reviews {
+  .callouts {
+    max-width: 700px;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
   }
-  #reviews .video {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 500px;
-            flex: 0 1 500px;
-    margin: 20px auto;
-  }
-  .comment {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+  #offers .h2 {
+    font-size: 36px;
   }
   .split {
     display: block;
+    padding: 0;
   }
-  .split h2, .split p {
+  .split h2 {
     text-align: center;
-  }
-  .split figure {
-    margin: auto;
   }
   .split article {
-    padding: 10px;
+    padding: 20px 10px;
+    margin: auto;
+    text-align: center;
+    max-width: 100%;
   }
   .split .btn {
-    margin: 10px auto;
-    display: table;
+    margin: 20px auto;
   }
-  #teens {
-    padding-top: 20px;
+  .name {
+    bottom: 80px;
   }
-  #teens figure {
+  .even figure {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #invisalign figure {
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  #results {
+    padding: 20px 0 40px;
+  }
+  #results figure {
     margin: auto;
     display: table;
   }
-  #teens figure:after {
-    content: '';
-    position: absolute;
-    left: -1px;
-    right: 0;
-    top: -1px;
-    bottom: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(26%, rgba(243, 244, 245, 0)), to(rgba(234, 238, 239, 0)));
-    background: linear-gradient(90deg, #f8f8f8 0%, rgba(243, 244, 245, 0) 26%, rgba(234, 238, 239, 0) 100%);
+  #experienced {
+    padding-top: 20px;
+    background: none;
+    margin-top: 20px;
   }
-  #offer .float {
-    float: none;
-    margin: 20px auto 35px;
-    text-align: center;
-    max-width: 100%;
+  #experienced:before {
+    background: -webkit-gradient(linear, right top, left top, from(#ececeb), color-stop(77%, white), to(#f5f4f0));
+    background: linear-gradient(270deg, #ececeb 0%, white 77%, #f5f4f0 100%);
+  }
+  #experienced figure {
+    margin: auto;
+    max-width: 600px;
+    display: table;
+    margin: 0 auto -80px;
+    padding: 0 0 0 60px;
+  }
+  #experienced h2 {
+    margin: 10px auto;
   }
   footer h2 {
     font-size: 42px;
   }
-  footer .frame {
-    margin: 20px auto;
-    width: 100%;
+  footer .flex-ed {
+    display: block;
   }
-  footer .frame iframe {
+  footer figure {
+    margin-top: 30px;
+  }
+  footer article a {
+    margin-bottom: 20px;
+  }
+  footer .map iframe {
     width: 100%;
   }
 }
 
 @media (max-width: 750px) {
-  header > .flex-ed {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  #fast figure {
+    margin: 20px auto 0;
   }
-  header .logo {
+  .callouts {
+    display: block;
+    padding: 30px 10px 10px;
+  }
+  .callouts .col {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-    margin-bottom: 10px;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+    padding: 0;
   }
-  #offer h5 {
-    font-size: 42px;
+  .callouts .portrait {
+    margin: 0 auto;
   }
-  #reviews {
+  .callouts a h3 {
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  #offers .h2 {
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+  #offers .flex-ed {
     display: block;
   }
-  #reviews .hear {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+  #offers .flex-ed > div:first-of-type {
+    padding: 20px 20px 30px;
   }
-  #reviews h4 {
-    margin: 10px 0 0;
-    text-align: center;
+  #experienced {
+    margin-top: 0;
   }
-  #stamp {
-    position: static;
-    margin: 10px auto;
+  h2, footer h2 {
+    font-size: 30px;
   }
-  .comment {
-    margin: 20px auto;
-    text-align: center;
+  #invisalign img {
+    margin: -10px auto 0;
   }
-}
-
-@media (max-width: 660px) {
-  #benefits h2 {
-    font-size: 26px;
-  }
-  #benefits h3 {
-    font-size: 26px;
-    margin-top: 15px;
-  }
-  #benefits .flex-ed {
-    display: block;
-    padding: 5px 0 20px;
-  }
-  #benefits ul {
-    display: table;
-    margin: auto;
-    padding-left: 0;
+  .bkg {
+    overflow: hidden;
   }
 }
 
 @media (max-width: 590px) {
-  #fixed-tabs strong {
-    display: none;
+  header .btn-alt {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
-  .in-logo {
-    max-width: 80%;
-    margin: 0 auto 10px;
-  }
-  h1 {
-    font-size: 36px;
-  }
-  .phone {
-    font-size: 26px;
-  }
-  .address, .phone p {
-    font-size: 1.2rem;
-    line-height: 1em;
+  header address {
     text-align: center;
-    margin-top: 5px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  header .phone {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  #banner .btn {
+    line-height: .8;
   }
   #banner article p {
     margin-bottom: 0;
   }
-  h2 {
+  .callouts a {
+    margin: 10px auto 0;
+  }
+  article h2 {
     font-size: 32px;
   }
-  h2 span {
-    font-size: 18px;
+  #ba {
+    max-width: 45%;
+    position: relative;
+    top: auto;
+    -webkit-transform: none;
+            transform: none;
+    margin: -40px 0 0 auto;
+    display: table;
   }
-  #offer h5 {
-    margin-top: 10px;
+  #results figure {
+    padding: 0;
   }
-  #offer h5 small, #offer h5 strong small {
-    font-size: 15px;
-    top: 10px;
-    right: 10px;
-  }
-  footer h2 {
-    font-size: 38px;
-    line-height: 1.2;
-  }
-  footer .frame {
+  .map {
     display: none;
-  }
-  #invisalign-quiz h1 {
-    font-size: 40px;
   }
 }
 
 @media (max-width: 500px) {
-  #offer .float {
-    padding: 0 10px;
+  h1 {
+    font-size: 42px;
   }
-  #offer .btn-alt {
-    max-width: 97%;
+  #banner h1 {
+    font-size: 50px;
   }
-  #benefits {
-    padding-top: 20px;
+  #offers .h2 {
+    font-size: 30px;
   }
-  #benefits h2 {
-    max-width: 300px;
-    margin: auto;
+  #offers .h3 {
+    font-size: 20px;
+  }
+  #experienced figure {
+    margin-bottom: -50px;
+  }
+  .name {
+    bottom: 60px;
   }
   footer .copy span {
     display: block;
-    font-size: 0;
+    visibility: hidden;
+    font-size: 1px;
   }
-  #invisalign-quiz h1 {
-    font-size: 32px;
+  #invisalign-quiz .forms p {
+    margin: 10px auto;
+  }
+  #invisalign-quiz input[type=text], #invisalign-quiz input[type=email] {
+    min-width: 100%;
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 410px) {
-  header .btn-alt, #banner .btn-alt, #offer .btn-alt {
-    font-size: 16px;
-    max-width: 100%;
-  }
-  h1 {
+@media (max-width: 400px) {
+  h1, #invisalign-quiz h1 {
     font-size: 36px;
-  }
-  article h2 {
-    font-size: 28px;
   }
   #banner article h2 {
     font-size: 38px;
   }
-  #offer h5 {
-    padding: 0;
-  }
-  #offer h5 small, #offer h5 small:last-of-type {
-    position: static;
-    text-align: center;
-    display: block;
-  }
-  #offer h5 strong {
-    padding: 10px 0;
-  }
-  #offer h5 small span {
-    display: inline;
-  }
-  #offer .btn {
-    width: 280px;
-  }
-  .name {
-    left: 3px;
-    right: 3px;
-  }
-  footer h2 {
+  h2, .h2 {
     font-size: 36px;
   }
-  footer .btn {
-    font-size: 34px;
-  }
-  figcaption p {
-    font-size: 18px;
+  .callouts {
+    padding-bottom: 10px;
   }
   #landing-page-form h1 {
     font-size: 36px;
+    line-height: 1.2;
   }
-  #invisalign-quiz input[type=text], #invisalign-quiz input[type=email] {
-    min-width: 270px;
-    margin: 10px 0;
+  #lp-appointment {
+    padding: 10px;
+    margin-top: 10px;
   }
-  #invisalign-quiz .forms p {
-    margin: 0 auto;
+  footer article span, footer article p:last-of-type {
+    font-size: 36px;
+  }
+  footer h2 {
+    font-size: 28px;
+  }
+  figcaption {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

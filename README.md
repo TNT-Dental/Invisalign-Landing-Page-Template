@@ -1,5 +1,5 @@
-# Invisalign Landing Page Template
+# Smile Makeover Landing Page Template
  
- Example Page: http://tntclients.com/cms/published/mysafaridental.com/invisalign-special.html
+ Example Page: http://www.tntclients.com/cms/published/stonebriarsmiledesign.com/lp-makeover-special.html
 
-![screenshot](Invisalign-LP-screenshot.jpg) 
+![screenshot](makeover-LP-screenshot.jpg) 
